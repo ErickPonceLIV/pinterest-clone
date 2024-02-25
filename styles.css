@@ -1,0 +1,280 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* Barra de navegación */
+
+.nav-main{
+position: relative;
+width: 100%;
+
+}
+#nav-container{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    /* border: solid black 4px; */
+}
+/* Componente de izquierda de la barra de navegación */
+#left-side{
+    display: flex;
+    width: 450px;
+    justify-content:space-evenly;
+    align-items: center;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+}
+
+#left-side img{
+    width: 60px;
+    padding: 15px;
+    border-radius: 50px ;
+}
+
+#left-side a {
+text-decoration: none;
+color: black;
+
+}
+
+
+/* #left-side button{
+    border-radius: 50px;
+    width:100px ;
+    height: 50px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-style:none;
+    width: 80px;
+    font-size: 16px;
+    cursor: pointer;
+} */
+
+/* Componente medio de la barra de navegación */
+
+#buscador{
+    width: 1000px ;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+.search{
+    width:750px;
+    border-radius: 50px;
+    background-color:rgb(210, 205, 205);
+    padding: 12px;
+    margin: 10px;
+    border-style: none;
+    height: 56px;
+    background-image: url("https://www.tuiss.com.ar/arquivos/iconLupa.svg?v=638259192514500000") ;
+    background-repeat: no-repeat;
+    background-position: 20px;
+    background-size: 1.4rem;
+    padding-inline-start: 3rem;
+    outline: none;
+}
+.search:focus{
+    border: 4px solid lightskyblue;
+    background-image: none;
+}
+
+/* Componente derecho de la barra de navegación */
+#right-side{   
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 10px;
+    width: 200px;
+    font-weight: bolder;
+}
+
+#right-side .menu-arrow{
+    width: 30px;
+    padding: 4px;
+ }
+#right-side img{
+    width: 60px;
+    padding: 15px;
+    border-radius: 50px ;
+}
+
+
+
+
+
+#right-side .profile{
+border-radius: 30px;
+}
+
+
+/* 
+/* Contenedor de cartas */
+
+.app-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#main-container{
+    max-width: 90%;
+    margin: 1em auto;
+    text-align: center;
+    columns: 235px;
+    padding: 1rem 0;
+    /* margin-top: 6rem; */
+margin: 4.5rem auto 0 auto;
+/* border: solid black 3px */
+
+}
+
+.card-main-container{
+position: relative;
+width: 350px;
+flex-direction: column;
+padding: 2rem;
+text-align:  center;
+}
+
+.card-wraper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.image{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+
+.card-hover{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.521);
+   border-radius: 1rem;
+   display: none; 
+}
+
+.save-btn-container{
+margin: 1rem auto;
+margin-inline-end: 1rem;
+width: 90px;
+height:50px;
+background-color:rgb(224, 12, 12);
+border-radius: 24px;
+text-align: center;
+color: white;
+padding: 15px;
+}
+
+.share-btn{
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    margin: 1.5rem auto;
+    align-items: center;
+}
+
+.share-btn img{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(216, 214, 214);
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.share-btn .element{
+    margin-left: 4px;
+}
+
+/* hovers y focus de la nav */
+#left-side .pinterest-icon:hover{
+    background-color: rgb(219, 218, 218);
+    border-radius: 50px;
+}
+#left-side .element-left-side:focus{
+padding-top: 20px;
+text-align: center;
+border-radius: 50px;
+width:110px ;
+height: 60px;
+background-color: black;
+color: white;
+border-style:none;
+font-size: 16px;
+cursor: pointer;
+}
+
+#right-side a:hover{
+background-color: rgb(223, 219, 219) ;
+border-radius: 50px;
+}
+
+/* hovers de la card */
+
+.save-btn-container:hover{
+    background-color: rgb(167, 25, 25);
+}
+
+.card-wraper:hover .card-hover{
+    display: block;
+}
+/* media queries */
+
+@media(max-width:320px){
+
+
+#buscador input{
+    width: 180px;
+}
+
+
+
+}
+
+@media(max-width:320px){
+
+.pinterest-icon{
+    display: block;
+}
+    
+    
+    }
+
+
+
+
+@media(max-width:320px){
+
+.element-left-side{
+    display: none;
+} 
+    
+    }
